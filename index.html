@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Rivera — Web Developer &amp; Product Engineer</title>
+  <meta name="description" content="Alex Rivera is a web developer building fast, accessible websites and web applications. Front-end engineering, full-stack products, and performance work for teams that care about craft.">
+  <meta name="author" content="Alex Rivera">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Rivera — Web Developer &amp; Product Engineer">
+  <meta property="og:description" content="Fast, accessible websites and web applications, built with care.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Set the theme before first paint to avoid a flash of the wrong palette -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Alex Rivera — home">
+        <span class="brand__mark" aria-hidden="true">A<span>R</span></span>
+        <span>Alex Rivera</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a class="nav__link" href="index.html" aria-current="page">Home</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+        <a class="btn btn--sm btn--block" href="contact.html">Start a project</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <span class="badge" data-reveal><span class="dot" aria-hidden="true"></span> Available for new work — Q3 2025</span>
+
+          <h1 class="mt-5" data-reveal style="--reveal-delay:60ms">
+            Web development with <em>clarity, speed</em> and craft.
+          </h1>
+
+          <p class="lead" data-reveal style="--reveal-delay:120ms">
+            I'm Alex — a web developer who turns complex ideas into fast, accessible
+            products. Ten years of building marketing sites, dashboards and design
+            systems that teams actually enjoy maintaining.
+          </p>
+
+          <div class="hero__actions" data-reveal style="--reveal-delay:180ms">
+            <a class="btn btn--lg" href="projects.html">
+              View my work
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="contact.html">Book an intro call</a>
+          </div>
+
+          <div class="hero__proof" data-reveal style="--reveal-delay:240ms">
+            <div class="cluster" style="gap:0.7rem">
+              <div class="avatars" aria-hidden="true">
+                <span class="avatar">NM</span>
+                <span class="avatar">JD</span>
+                <span class="avatar">SK</span>
+                <span class="avatar">+9</span>
+              </div>
+              <div>
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <div class="text-muted" style="font-size:0.8rem">12 happy clients this year</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal style="--reveal-delay:200ms">
+          <div class="float-card float-card--1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>
+            Lighthouse 100 / 100
+          </div>
+          <div class="float-card float-card--2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            WCAG 2.2 AA
+          </div>
+
+          <div class="window">
+            <div class="window__bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+              <span class="window__title">build.ts</span>
+            </div>
+<pre><code><span class="tok-com">// Ship the whole product, not just a screen.</span>
+<span class="tok-key">const</span> <span class="tok-prop">project</span> = {
+  <span class="tok-prop">stack</span>:    [<span class="tok-str">'TypeScript'</span>, <span class="tok-str">'React'</span>, <span class="tok-str">'Node'</span>],
+  <span class="tok-prop">focus</span>:    <span class="tok-str">'performance + a11y'</span>,
+  <span class="tok-prop">timeline</span>: <span class="tok-str">'6 weeks'</span>,
+  <span class="tok-prop">status</span>:   <span class="tok-str">'shipped'</span>,
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Logo strip ================= -->
+    <section class="section--tight section--soft">
+      <div class="container">
+        <p class="text-center text-muted" style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:600">
+          Trusted by teams at
+        </p>
+        <div class="logos mt-5">
+          <span>Northwind</span>
+          <span>Kestrel</span>
+          <span>Loopwork</span>
+          <span>Orbit</span>
+          <span>Fathom&amp;Co</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Services preview ================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">What I do</span>
+          <h2>Three ways I help teams ship better web products</h2>
+          <p class="lead mt-4">
+            Every engagement starts with the same question: what does success look
+            like in ninety days? Then we work backwards from there.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card" data-reveal>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </span>
+            <h3>Front-end engineering</h3>
+            <p>Pixel-accurate, component-driven interfaces built on a design system — responsive, accessible and quick to extend.</p>
+            <a class="card__link" href="services.html#frontend">Explore service <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card" data-reveal style="--reveal-delay:80ms">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+            </span>
+            <h3>Full-stack products</h3>
+            <p>APIs, auth, billing and dashboards — the unglamorous plumbing that turns a prototype into something you can charge for.</p>
+            <a class="card__link" href="services.html#fullstack">Explore service <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card" data-reveal style="--reveal-delay:160ms">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+            </span>
+            <h3>Performance &amp; audits</h3>
+            <p>Core Web Vitals, accessibility and technical SEO fixes that move real business metrics, with a prioritised action list.</p>
+            <a class="card__link" href="services.html#performance">Explore service <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Stats ================= -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="stats" data-reveal>
+          <div>
+            <div class="stat__num" data-count="120">0<span>+</span></div>
+            <div class="stat__label">Projects delivered</div>
+          </div>
+          <div>
+            <div class="stat__num" data-count="10">0<span>yrs</span></div>
+            <div class="stat__label">Building for the web</div>
+          </div>
+          <div>
+            <div class="stat__num" data-count="98">0<span>%</span></div>
+            <div class="stat__label">Average Lighthouse score</div>
+          </div>
+          <div>
+            <div class="stat__num" data-count="12">0<span>+</span></div>
+            <div class="stat__label">Long-term clients</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ================= Featured work ================= -->
+    <section class="section section--soft" id="work">
+      <div class="container">
+        <div class="cluster" style="justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem" data-reveal>
+          <div class="section-head" style="margin-bottom:0">
+            <span class="eyebrow">Selected work</span>
+            <h2>Recent projects</h2>
+          </div>
+          <a class="btn btn--ghost btn--sm btn--inline" href="projects.html">All projects</a>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card project" data-reveal>
+            <div class="project__media">
+              <div class="thumb" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg>
+                <span>Kestrel — analytics console</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Kestrel Analytics</h3>
+                <span class="project__year">2025</span>
+              </div>
+              <p>A real-time analytics console handling 40M events a day, rebuilt from a sluggish jQuery dashboard into a virtualised React app.</p>
+              <div class="project__tags">
+                <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">D3</span>
+              </div>
+              <a class="card__link" href="projects.html">Read the case study <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="card project" data-reveal style="--reveal-delay:80ms">
+            <div class="project__media">
+              <div class="thumb" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18 15 15 0 010-18"/></svg>
+                <span>Loopwork — commerce storefront</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Loopwork Storefront</h3>
+                <span class="project__year">2024</span>
+              </div>
+              <p>A headless commerce build that cut largest contentful paint from 4.1s to 0.9s and lifted checkout conversion by 23%.</p>
+              <div class="project__tags">
+                <span class="tag">Next.js</span><span class="tag">Stripe</span><span class="tag">Edge</span>
+              </div>
+              <a class="card__link" href="projects.html">Read the case study <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Process + testimonials ================= -->
+    <section class="section">
+      <div class="container split">
+        <div data-reveal>
+          <span class="eyebrow">How we work</span>
+          <h2>A process without the mystery</h2>
+          <p class="lead mt-4 mb-6">
+            You always know what's happening, what's next, and what it costs.
+            No black boxes, no surprise invoices.
+          </p>
+
+          <div class="timeline">
+            <div class="tl-item">
+              <h3>01 — Discovery</h3>
+              <p>A 60-minute call and a written brief. We agree on scope, success metrics and what we are deliberately <em>not</em> building.</p>
+            </div>
+            <div class="tl-item">
+              <h3>02 — Design &amp; prototype</h3>
+              <p>Wireframes and a clickable prototype so you can react to something real before a line of production code is written.</p>
+            </div>
+            <div class="tl-item">
+              <h3>03 — Build in the open</h3>
+              <p>Weekly demos on a staging URL, tickets in a board you can see, and a Slack channel for the small questions.</p>
+            </div>
+            <div class="tl-item">
+              <h3>04 — Launch &amp; handover</h3>
+              <p>Deployment, monitoring, documentation and a recorded walkthrough so your team owns it with confidence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack" data-reveal style="--reveal-delay:100ms">
+          <figure class="card quote">
+            <blockquote>“Alex rebuilt our storefront in six weeks and it now loads faster than our competitors' homepages. Conversion is up 23% and the codebase is genuinely a pleasure to work in.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">NM</span>
+              <span><b>Nadia Moreau</b><span>Head of Product, Loopwork</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card quote">
+            <blockquote>“The accessibility audit was worth every penny. We went from 31 open issues to zero and passed our public-sector procurement review on the first attempt.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">JD</span>
+              <span><b>James Doyle</b><span>CTO, Northwind Digital</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div class="cta-band__grid">
+            <div>
+              <h2>Have a project in mind?</h2>
+              <p class="mt-4">
+                Tell me about the problem you're solving. I reply to every enquiry
+                within one business day — usually with a few useful questions.
+              </p>
+            </div>
+            <div class="cluster">
+              <a class="btn btn--lg btn--inline" href="contact.html">Start a conversation</a>
+              <a class="btn btn--ghost btn--lg btn--inline" href="services.html">See pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">A<span>R</span></span>
+            <span>Alex Rivera</span>
+          </a>
+          <p>Independent web developer building fast, accessible products for teams that care about the details.</p>
+        </div>
+
+        <div>
+          <h4>Pages</h4>
+          <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <div class="footer__links">
+            <a href="services.html#frontend">Front-end engineering</a>
+            <a href="services.html#fullstack">Full-stack products</a>
+            <a href="services.html#performance">Performance audits</a>
+            <a href="services.html#care">Care plans</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Elsewhere</h4>
+          <div class="footer__links">
+            <a href="https://github.com/" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@alexrivera.dev">hello@alexrivera.dev</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2025</span> Alex Rivera. Built by hand, no page builders.</p>
+        <div class="socials">
+          <a href="https://github.com/" aria-label="GitHub" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 00.5 12a11.5 11.5 0 007.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.5.2 2.7.1 3a4.6 4.6 0 011.2 3.2c0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0023.5 12 11.5 11.5 0 0012 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 005 0 2.5 2.5 0 00-2.52-2.5zM3 8.98h4V21H3zM9 8.98h3.8v1.64h.05a4.2 4.2 0 013.77-2.07c4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V21H9z"/></svg>
+          </a>
+          <a href="mailto:hello@alexrivera.dev" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
