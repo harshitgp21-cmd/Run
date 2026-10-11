@@ -1,0 +1,14 @@
+{
+  "name": "alex-rivera-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimalist, professional portfolio website for a web developer. Static HTML, CSS and vanilla JS.",
+  "scripts": {
+    "start": "npx --yes serve .",
+    "test": "node tests/smoke.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  },
+  "license": "MIT"
+}

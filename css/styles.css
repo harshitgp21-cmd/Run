@@ -471,6 +471,7 @@ p { text-wrap: pretty; }
 
 /* Projects */
 .filters { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-6); }
+.cluster .filters { margin-bottom: 0; }
 .filter {
   padding: 0.45em 1.05em; font-size: var(--step--1); font-weight: 600;
   color: var(--muted); background: var(--bg-elev);

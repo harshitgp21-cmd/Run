@@ -11,7 +11,7 @@
     return Array.prototype.slice.call((ctx || document).querySelectorAll(sel));
   };
 
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
   /* ---------- Theme ---------- */
   var root = document.documentElement;
@@ -252,6 +252,21 @@
       }, 900);
     });
   });
+
+
+  /* ---------- Prefill the contact form from the query string ---------- */
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var wanted = params.get('service');
+    var serviceSelect = $('#service');
+
+    if (wanted && serviceSelect) {
+      var match = Array.prototype.filter.call(serviceSelect.options, function (o) {
+        return o.value === wanted;
+      })[0];
+      if (match) serviceSelect.value = wanted;
+    }
+  } catch (e) {}
 
   /* ---------- Footer year ---------- */
   var year = $('#year');
